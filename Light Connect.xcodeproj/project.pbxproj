@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		039180848B8A997535A965D9 /* Pods_Light_Connect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 505DCAFCFF85347629A1603A /* Pods_Light_Connect.framework */; };
 		908CE2A71FFB563C001D829C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908CE2A61FFB563C001D829C /* AppDelegate.swift */; };
 		908CE2A91FFB563C001D829C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908CE2A81FFB563C001D829C /* ViewController.swift */; };
 		908CE2AC1FFB563C001D829C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 908CE2AA1FFB563C001D829C /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CFBC34E32507FD23F947FD7 /* Pods-Light Connect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Light Connect.release.xcconfig"; path = "Pods/Target Support Files/Pods-Light Connect/Pods-Light Connect.release.xcconfig"; sourceTree = "<group>"; };
+		505DCAFCFF85347629A1603A /* Pods_Light_Connect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Light_Connect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		521E6CB98289F7B0013E7CF2 /* Pods-Light Connect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Light Connect.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Light Connect/Pods-Light Connect.debug.xcconfig"; sourceTree = "<group>"; };
 		908CE2A31FFB563C001D829C /* Light Connect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Light Connect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		908CE2A61FFB563C001D829C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		908CE2A81FFB563C001D829C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				039180848B8A997535A965D9 /* Pods_Light_Connect.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BAF9EB6329CC164308F60A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				521E6CB98289F7B0013E7CF2 /* Pods-Light Connect.debug.xcconfig */,
+				3CFBC34E32507FD23F947FD7 /* Pods-Light Connect.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		908CE29A1FFB563C001D829C = {
 			isa = PBXGroup;
 			children = (
 				908CE2A51FFB563C001D829C /* Light Connect */,
 				908CE2A41FFB563C001D829C /* Products */,
+				0BAF9EB6329CC164308F60A6 /* Pods */,
+				ACE7124B46F7DFA3411C1F8E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +83,14 @@
 			path = "Light Connect";
 			sourceTree = "<group>";
 		};
+		ACE7124B46F7DFA3411C1F8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				505DCAFCFF85347629A1603A /* Pods_Light_Connect.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 908CE2B81FFB563C001D829C /* Build configuration list for PBXNativeTarget "Light Connect" */;
 			buildPhases = (
+				65A250A3EDE9635BCDC1671E /* [CP] Check Pods Manifest.lock */,
 				908CE29F1FFB563C001D829C /* Sources */,
 				908CE2A01FFB563C001D829C /* Frameworks */,
 				908CE2A11FFB563C001D829C /* Resources */,
+				E447A4E15065031A27B340B9 /* [CP] Embed Pods Frameworks */,
+				B983D44555B662F6C8E201CA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,6 +160,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65A250A3EDE9635BCDC1671E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B983D44555B662F6C8E201CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Light Connect/Pods-Light Connect-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E447A4E15065031A27B340B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Light Connect/Pods-Light Connect-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		908CE29F1FFB563C001D829C /* Sources */ = {
@@ -276,6 +351,7 @@
 		};
 		908CE2B91FFB563C001D829C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 521E6CB98289F7B0013E7CF2 /* Pods-Light Connect.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +367,7 @@
 		};
 		908CE2BA1FFB563C001D829C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CFBC34E32507FD23F947FD7 /* Pods-Light Connect.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
